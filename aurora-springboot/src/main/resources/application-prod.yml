@@ -5,9 +5,9 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.0.180:3306/aurora?serverTimezone=Asia/Shanghai&allowMultiQueries=true
-    username: root
-    password: yu15879987305
+    url: jdbc:mysql://你的服务器ip:3306/aurora?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: 账号
+    password: 密码
     hikari:
       minimum-idle: 10
       idle-timeout: 180000
@@ -19,9 +19,9 @@ spring:
       connection-test-query: SELECT 1
 
   redis:
-    host: 192.168.0.180
+    host: 你的服务器ip
     port: 6379
-    password: yu15879987305
+    password: 密码
     database: 0
     lettuce:
       pool:
@@ -31,10 +31,10 @@ spring:
         max-wait: 10000
 
   rabbitmq:
-    host: 192.168.0.180
+    host: 你的服务器ip
     port: 5672
-    username: guest
-    password: guest
+    username: 账号
+    password: 密码
     listener:
       simple:
         retry:
@@ -44,12 +44,12 @@ spring:
 
   elasticsearch:
     rest:
-      uris: 192.168.0.180:9200
+      uris: 你的服务器ip:9200
 
   mail:
     host: smtp.qq.com
-    username: 1980292432@qq.com
-    password: ywelybtxxbnccegb
+    username: qq邮箱
+    password: 密码
     default-encoding: UTF-8
     protocol: smtp
     port: 465
@@ -86,11 +86,11 @@ search:
 upload:
   mode: oss
   oss:
-    url: http://boke-yxh.oss-cn-hangzhou.aliyuncs.com/
-    endpoint: oss-cn-hangzhou.aliyuncs.com
-    accessKeyId: LTAI5tNMPJPbNkNP14WDNYaZ
-    accessKeySecret: YGspPDxEjYFVDXRQHU9ZQZELkZZQWQ
-    bucketName: boke-yxh
+    url: 你的oss路径
+    endpoint: 你的endpoint
+    accessKeyId: 你的accessKeyId
+    accessKeySecret: 你的accessKeySecret
+    bucketName: 你的bucketName
   minio:
     url: http://minio的ip:9000/
     endpoint: http://minio的ip:9000
